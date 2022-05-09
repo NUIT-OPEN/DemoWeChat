@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/message_page">
+    <fragment
+        android:id="@+id/message_page"
+        android:name="com.example.demowechat.fragment.MessageFragment" />
+
+    <fragment
+        android:id="@+id/contact_page"
+        android:name="com.example.demowechat.fragment.ContactFragment" />
+
+    <fragment
+        android:id="@+id/discover_page"
+        android:name="com.example.demowechat.fragment.DiscoverFragment" />
+
+    <fragment
+        android:id="@+id/me_page"
+        android:name="com.example.demowechat.fragment.MeFragment" />
+
+</navigation>

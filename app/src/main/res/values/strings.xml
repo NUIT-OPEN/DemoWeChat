@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">DemoWeChat</string>
+    <!-- Strings related to login -->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="password_repeat">Password (Repeat)</string>
+    <string name="hint_username">Input your username.</string>
+    <string name="hint_password">Input your password.</string>
+    <string name="hint_auth">Upper account info will use by login auth only.</string>
+    <string name="login_by_account">Login By WxID/QQ/Email</string>
+    <string name="register">Register</string>
+    <string name="register_text">Register Your Account</string>
+    <string name="agree_and_login">Agree &amp; Login</string>
+
+    <string name="hint_register">Please register a user first.</string>
+    <string name="hint_info_mismatch">Login info mismatch and check it again, please.</string>
+    <string name="hint_login_success">Welcome %s, Login success.</string>
+
+    <!-- Register -->
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string name="birthday">Birthday</string>
+    <string name="hint_birthday">Click to select your birthday.</string>
+
+    <string name="accept_rules">Accept Our Rules.</string>
+    <string name="hint_pwd_mismatch">Password input mismatch, try it again.</string>
+    <string name="hint_accept_rules">You must accept our rules to continue.</string>
+    <string name="hint_register_success">Register success.</string>
+    <string name="hint_no_gender">Select your gender, please.</string>
+    <string name="hint_no_complete">Complete your information, please.</string>
+
+    <!-- Nav -->
+    <string name="message">Message</string>
+    <string name="contact">Contact</string>
+    <string name="discover">Discover</string>
+    <string name="me">Me</string>
+
+    <!-- Other -->
+    <string name="item">Item</string>
+    <string name="todo">TODO</string>
+    <string name="message_content">Hello I am %s.</string>
+
+    <!-- My Items -->
+    <string name="my_item_service">Service</string>
+    <string name="my_item_favourites">Favourites</string>
+    <string name="my_item_sms">SMS</string>
+    <string name="my_item_video">Video</string>
+    <string name="my_item_card">Card</string>
+    <string name="my_item_sticker">Sticker</string>
+</resources>
