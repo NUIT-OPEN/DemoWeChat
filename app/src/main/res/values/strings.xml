@@ -47,6 +47,7 @@
     <string name="my_item_favourites">Favourites</string>
     <string name="my_item_sms">SMS</string>
     <string name="my_item_video">Video</string>
+    <string name="my_item_weather">Weather</string>
     <string name="my_item_card">Card</string>
     <string name="my_item_sticker">Sticker</string>
 </resources>

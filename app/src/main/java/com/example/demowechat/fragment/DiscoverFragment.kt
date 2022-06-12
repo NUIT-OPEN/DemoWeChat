@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ListView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.demowechat.CommonVariables
 import com.example.demowechat.R
@@ -35,6 +36,12 @@ class DiscoverFragment : Fragment(R.layout.fragment_discover) {
                 getString(R.string.my_item_video)
             )
         )
+        list.add(
+            MyItem(
+                androidx.appcompat.R.drawable.abc_ic_menu_share_mtrl_alpha,
+                getString(R.string.my_item_weather)
+            )
+        )
     }
 
     override fun onCreateView(
@@ -47,6 +54,15 @@ class DiscoverFragment : Fragment(R.layout.fragment_discover) {
             val lv_my_list = view.findViewById<ListView>(R.id.lv_discover)
             activity?.let {
                 lv_my_list?.adapter = MyListAdapter(it, R.layout.layout_discover_item, list)
+                lv_my_list.setOnItemClickListener { parent, view, position, id ->
+                    val obj = list.get(position)
+                    if (obj.title.equals(getString(R.string.my_item_weather))){
+                        Toast.makeText(context, "国内 | 广东 | 广州 2022/06/12 17:00更新\n" +
+                                "24.9℃\n" +
+                                "\n" +
+                                " 997hPa  87%  -  西南风 5级", Toast.LENGTH_SHORT).show()
+                    }
+                }
             }
             return view
         }
