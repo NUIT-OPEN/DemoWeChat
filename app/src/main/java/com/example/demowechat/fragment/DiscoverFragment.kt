@@ -1,5 +1,6 @@
 package com.example.demowechat.fragment
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -42,6 +43,12 @@ class DiscoverFragment : Fragment(R.layout.fragment_discover) {
                 getString(R.string.my_item_weather)
             )
         )
+        list.add(
+            MyItem(
+                androidx.appcompat.R.drawable.abc_ic_menu_overflow_material,
+                getString(R.string.my_item_offline)
+            )
+        )
     }
 
     override fun onCreateView(
@@ -56,11 +63,24 @@ class DiscoverFragment : Fragment(R.layout.fragment_discover) {
                 lv_my_list?.adapter = MyListAdapter(it, R.layout.layout_discover_item, list)
                 lv_my_list.setOnItemClickListener { parent, view, position, id ->
                     val obj = list.get(position)
-                    if (obj.title.equals(getString(R.string.my_item_weather))){
-                        Toast.makeText(context, "国内 | 广东 | 广州 2022/06/12 17:00更新\n" +
-                                "24.9℃\n" +
-                                "\n" +
-                                " 997hPa  87%  -  西南风 5级", Toast.LENGTH_SHORT).show()
+                    if (obj.title.equals(getString(R.string.my_item_weather))) {
+                        Toast.makeText(
+                            context, "国内 | 广东 | 广州 2022/06/12 17:00更新\n" +
+                                    "24.9℃\n" +
+                                    "\n" +
+                                    " 997hPa  87%  -  西南风 5级", Toast.LENGTH_SHORT
+                        ).show()
+                    } else if (obj.title.equals(getString(R.string.my_item_offline))) {
+                        val dialog = AlertDialog.Builder(context)
+                        dialog.setIcon(androidx.appcompat.R.drawable.abc_ic_menu_overflow_material)
+                        dialog.setTitle(getString(R.string.my_item_offline))
+                        dialog.setMessage("Oops!")
+                        dialog.setNegativeButton(
+                            "わかりました"
+                        ) { _, which ->
+                            System.exit(0)
+                        }
+                        dialog.show()
                     }
                 }
             }

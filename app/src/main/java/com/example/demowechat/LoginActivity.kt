@@ -15,13 +15,14 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar?.hide()
         common_vars = application as CommonVariables
 
+        val et_username = findViewById<EditText>(R.id.et_username)
+        val et_password = findViewById<EditText>(R.id.et_password)
+
         findViewById<ImageButton>(R.id.ib_exit).setOnClickListener {
             finish()
         }
 
         findViewById<Button>(R.id.b_login).setOnClickListener {
-            val et_username = findViewById<EditText>(R.id.et_username)
-            val et_password = findViewById<EditText>(R.id.et_password)
             login(et_username.text.toString(), et_password.text.toString())
         }
 
@@ -29,6 +30,11 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(this, RegisterActivity::class.java)
             startActivity(intent)
+        }
+
+        if (common_vars.user != null) {
+            et_username.setText(common_vars.user!!.username)
+            et_password.setText(common_vars.user!!.password)
         }
     }
 

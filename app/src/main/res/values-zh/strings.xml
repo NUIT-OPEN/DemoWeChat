@@ -49,6 +49,7 @@
     <string name="my_item_sms">朋友圈</string>
     <string name="my_item_video">视频</string>
     <string name="my_item_weather">天气</string>
+    <string name="my_item_offline">强制下线</string>
     <string name="my_item_card">卡包</string>
     <string name="my_item_sticker">表情</string>
 </resources>
